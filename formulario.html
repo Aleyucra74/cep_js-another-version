@@ -1,0 +1,178 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+
+<head>
+    <meta charset="UTF-8">
+    <title>Formulario de controle</title>
+    <link href="css/estilo_formulario.css" rel="stylesheet" type="text/css" />
+    <link href="https://fonts.googleapis.com/css?family=Merriweather" rel="stylesheet">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+    <script src="http://ajax.googleapis.com/ajax/libs/jquery/1.11.2/jquery.min.js"></script>
+    <script src="http://code.jquery.com/jquery-1.8.3.js"></script>
+    <script src="http://code.jquery.com/ui/1.9.2/jquery-ui.js"></script>
+    <link rel="stylesheet" href="http://code.jquery.com/ui/1.9.1/themes/ui-lightness/jquery-ui.css" />
+
+    <script src="js/functions.js"></script>
+
+</head>
+
+<body>
+    <div>
+        <h1>Formulario de contato</h1>
+        <section id="formulario">
+            <form id="frmClientes" name="frmClientes">
+                <!--            -->
+                <fieldset class="blue">
+                    <legend class="red">Obrigatorio</legend>
+                    <label for="txtNomeCliente" class="rotulos preto ">
+                        Name:
+                    </label>
+                    <input type="text" size="50" maxlength="10" id="txtNomeCliente" name="txt_nome" id="idade" name="int_idade" class="caixas" required/>
+                    <br/>
+                    <br/>
+                    <label for="idade" class="rotulos cinza">Idade</label>
+                    <input type="number" size="5" maxlength="3" max="110" min="18" placeholder="Idade" class="caixas" required/>
+                    <br/>
+                    <br/>
+                    <label for="telefone"> telefone:</label>
+                    <input type="text" placeholder="tele" required id="txtTelefone">
+                    <br>
+                    <br>
+                    <label for="email" class="rotulos preto">E-mail</label>
+                    <input type="email" size="50" id="email" name="txt_email" class="caixas" required/>
+                    </br>
+                    </br>
+                    <label for="txtEndereco">Endereço:</label>
+                    <input type="text" name="txtEndereco" id="txtEndereco">
+                    <br>
+                    <br>
+                    <label for="cep">CEP</label>
+                    <input id="txtCep" type="text" required/>
+                    <button type="button" id="btncep">Buscar CEP</button>
+                    <br>
+                    <br>
+                    <label for="numero">Número</label>
+                    <input id="numero" type="text" />
+                    <br>
+                    <br>
+                    <label for="complemento">Complemento</label>
+                    <input id="complemento" type="text" />
+                    <br>
+                    <br>
+                    <label for="ibge">IBGE</label>
+                    <input id="ibge" type="text" />
+                    <br>
+                    <br>
+                    <label for="txtBairro">Bairro</label>
+                    <input id="txtBairro" type="text" required/>
+                    <br/>
+                    <br/>
+                    <label for="uf">Estado</label>
+                    <select id="uf">
+                        <option value="AC">Acre</option>
+                        <option value="AL">Alagoas</option>
+                        <option value="AP">Amapá</option>
+                        <option value="AM">Amazonas</option>
+                        <option value="BA">Bahia</option>
+                        <option value="CE">Ceará</option>
+                        <option value="DF">Distrito Federal</option>
+                        <option value="ES">Espírito Santo</option>
+                        <option value="GO">Goiás</option>
+                        <option value="MA">Maranhão</option>
+                        <option value="MT">Mato Grosso</option>
+                        <option value="MS">Mato Grosso do Sul</option>
+                        <option value="MG">Minas Gerais</option>
+                        <option value="PA">Pará</option>
+                        <option value="PB">Paraíba</option>
+                        <option value="PR">Paraná</option>
+                        <option value="PE">Pernambuco</option>
+                        <option value="PI">Piauí</option>
+                        <option value="RJ">Rio de Janeiro</option>
+                        <option value="RN">Rio Grande do Norte</option>
+                        <option value="RS">Rio Grande do Sul</option>
+                        <option value="RO">Rondônia</option>
+                        <option value="RR">Roraima</option>
+                        <option value="SC">Santa Catarina</option>
+                        <option value="SP">São Paulo</option>
+                        <option value="SE">Sergipe</option>
+                        <option value="TO">Tocantins</option>
+                    </select>
+                    <br/>
+                    <br/>
+                    <label for="data_nasc" class="rotulos cinza">Data de nascimento</label>
+                    <input type="date" id="data_nasc" name="txt_nasc" class="cor caixas" required/>
+                    <br/>
+                    <br/>
+                    <!--
+                    <label for="cor" class="rotulos preto">Escolha sua cor favorita</label>
+                    <input type="color" id="cor" name="txt_cor" class="caixas" />
+                    <br/>
+                    <br/>
+-->
+                </fieldset>
+                <fieldset class="blue">
+                    <legend class="red">Adicionais</legend>
+                    <h3>Sexo:</h3>
+                    <input type="radio" id="masculino" name="txt_sexo" value="M">
+                    <label for="masculino" class="rotulos">Masculino</label>
+                    <input type="radio" id="feminino" name="txt_sexo" value="F">
+                    <label for="feminino" class="rotulos">Feminino</label>
+                    <input type="radio" id="outros" name="txt_sexo" value="O">
+                    <label for="outro" class="rotulos">Outros</label>
+                    <br/>
+                    <br/>
+                    <textarea name="txt_mensagem" id="mensagem" cols="85" rows="20" class="caixas"></textarea>
+                    <br/>
+                    <br/>
+                    <input type="checkbox" id="news" name="txt_news" value="sim para news do letter" />
+                    <label form="" class="rotulos cinza">Desejo receber nossas newsletter</label>
+                    <!--                <input type="submit" value="Enviar Formulario" />-->
+                    <br/>
+                    <br/>
+                    <button type="button" id="btnEnviarClientes">Enviar</button>
+                    <button type="button" id="btnPesquisarClientes">Pesquisar</button>
+                    <input type="reset" id="apagar_tudo" name="apagar" value="apagar formulario" />
+                </fieldset>
+            </form>
+            
+            <div id="dialog" title="Atenção">
+                <p id="resultado"></p>
+            </div>
+<!--
+            <script type="text/javascript">
+               $("#cep").focusout(function(){
+			//Início do Comando AJAX
+			$.ajax({
+				//O campo URL diz o caminho de onde virá os dados
+				//É importante concatenar o valor digitado no CEP
+				url: 'https://viacep.com.br/ws/'+$(this).val()+'/json/unicode/',
+				//Aqui você deve preencher o tipo de dados que será lido,
+				//no caso, estamos lendo JSON.
+				dataType: 'json',
+				//SUCESS é referente a função que será executada caso
+				//ele consiga ler a fonte de dados com sucesso.
+				//O parâmetro dentro da função se refere ao nome da variável
+				//que você vai dar para ler esse objeto.
+				success: function(resposta){
+					//Agora basta definir os valores que você deseja preencher
+					//automaticamente nos campos acima.
+					$("#logradouro").val(resposta.logradouro);
+					$("#complemento").val(resposta.complemento);
+					$("#bairro").val(resposta.bairro);
+					$("#cidade").val(resposta.localidade);
+					$("#uf").val(resposta.uf);
+					//Vamos incluir para que o Número seja focado automaticamente
+					//melhorando a experiência do usuário
+					$("#numero").focus();
+				}
+			});
+		});
+            </script>
+-->
+        </section>
+
+    </div>
+
+</body>
+
+</html>
